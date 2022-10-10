@@ -49,5 +49,4 @@ object NetworkModule {
     fun provideUnsplashApi(retrofit: Retrofit): UnsplashApi {
         return retrofit.create(UnsplashApi::class.java)
     }
-
 }
