@@ -45,7 +45,7 @@ fun UnsplashImagePreview() {
         unsplashImage = UnsplashImage(
             id = "1",
             urls = Urls(regular = ""),
-            likes = 100,
+            likes = 1000,
             user = User(username = "John Doe", userLinks = UserLinks(html = ""))
         )
     )

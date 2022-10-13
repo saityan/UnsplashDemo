@@ -7,12 +7,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.ExperimentalPagingApi
-import coil.annotation.ExperimentalCoilApi
 import dagger.hilt.android.AndroidEntryPoint
 import saityan.misc.unsplashdemo.navigation.SetupNavGraph
 import saityan.misc.unsplashdemo.ui.theme.UnsplashDemoTheme
 
-@ExperimentalCoilApi
 @ExperimentalPagingApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
