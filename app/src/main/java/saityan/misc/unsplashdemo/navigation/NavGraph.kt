@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.paging.ExperimentalPagingApi
 import coil.annotation.ExperimentalCoilApi
 import saityan.misc.unsplashdemo.navigation.screens.home.HomeScreen
+import saityan.misc.unsplashdemo.navigation.screens.search.SearchScreen
 
 @ExperimentalCoilApi
 @ExperimentalPagingApi
@@ -16,11 +17,11 @@ fun SetupNavGraph(navController: NavHostController) {
         navController = navController,
         startDestination = ScreenList.Home.route
     ) {
-        composable(route = ScreenList.Home.route){
+        composable(route = ScreenList.Home.route) {
             HomeScreen(navController = navController)
         }
-        composable(route = ScreenList.Search.route){
-            //SearchScreen(navController = navController)
+        composable(route = ScreenList.Search.route) {
+            SearchScreen(navController = navController)
         }
     }
 }

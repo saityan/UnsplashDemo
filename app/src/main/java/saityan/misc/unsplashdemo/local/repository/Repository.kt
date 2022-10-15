@@ -7,6 +7,7 @@ import androidx.paging.PagingData
 import kotlinx.coroutines.flow.Flow
 import saityan.misc.unsplashdemo.local.UnsplashDatabase
 import saityan.misc.unsplashdemo.model.UnsplashImage
+import saityan.misc.unsplashdemo.paging.SearchPagingSource
 import saityan.misc.unsplashdemo.paging.mediator.UnsplashRemoteMediator
 import saityan.misc.unsplashdemo.remote.UnsplashApi
 import saityan.misc.unsplashdemo.utils.Constants.ITEMS_PER_PAGE
@@ -17,6 +18,7 @@ class Repository  @Inject constructor(
     private val unsplashApi: UnsplashApi,
     private val unsplashDatabase: UnsplashDatabase
 ) {
+
     fun getAllImages(): Flow<PagingData<UnsplashImage>> {
 
         val pagingSourceFactory = {
@@ -30,6 +32,19 @@ class Repository  @Inject constructor(
                 unsplashDatabase = unsplashDatabase
             ),
             pagingSourceFactory = pagingSourceFactory
+        )
+        .flow
+    }
+
+    fun searchImages(query: String): Flow<PagingData<UnsplashImage>> {
+        return Pager(
+            config = PagingConfig(pageSize = ITEMS_PER_PAGE),
+            pagingSourceFactory = {
+                SearchPagingSource(
+                    unsplashApi = unsplashApi,
+                    query = query
+                )
+            }
         )
         .flow
     }
