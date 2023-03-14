@@ -21,7 +21,6 @@ private val LightColorPalette = lightColors(
     background = Color.White
 
     /* Other default colors to override
-    background = Color.White,
     surface = Color.White,
     onPrimary = Color.White,
     onSecondary = Color.Black,
@@ -32,7 +31,7 @@ private val LightColorPalette = lightColors(
 
 @Composable
 fun UnsplashDemoTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
-    val colors = DarkColorPalette
+    val colors = if (darkTheme) DarkColorPalette else LightColorPalette
 
     MaterialTheme(
         colors = colors,
