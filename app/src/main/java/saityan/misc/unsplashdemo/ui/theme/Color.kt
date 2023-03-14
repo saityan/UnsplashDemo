@@ -14,6 +14,3 @@ val Colors.topAppBarContentColor: Color
 
 val Colors.topAppBarBackgroundColor: Color
     get() = if (isLight) Orange else Color.Black
-
-val Colors.windowBackground: Color
-    get() = if (isLight) Color.White else Color.Black
