@@ -22,6 +22,8 @@ class MainActivity : ComponentActivity() {
 
         installSplashScreen()
 
+        window.setBackgroundDrawable(null)
+
         setContent {
             UnsplashDemoTheme {
                 val navController = rememberNavController()

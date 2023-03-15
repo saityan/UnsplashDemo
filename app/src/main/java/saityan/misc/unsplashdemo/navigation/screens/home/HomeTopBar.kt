@@ -15,7 +15,7 @@ fun HomeTopBar(
     TopAppBar(
         title = {
             Text(
-                text = "Home",
+                text = "Search",
                 color = MaterialTheme.colors.topAppBarContentColor
             )
         },
