@@ -44,8 +44,10 @@ fun SearchTopBar(
                 .semantics {
                     contentDescription = "TextField"
                 },
-            value = text,
-            onValueChange = { onTextChange(it) },
+            value = text.replace("\n", ""),
+            onValueChange = {
+                onTextChange(it)
+            },
             placeholder = {
                 Text(
                     modifier = Modifier

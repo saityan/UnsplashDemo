@@ -16,7 +16,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import saityan.misc.unsplashdemo.ui.theme.HeartRed
+import saityan.misc.unsplashdemo.ui.theme.Heart
 
 @Composable
 fun LikeCounter(
@@ -32,7 +32,7 @@ fun LikeCounter(
         Icon(
             painter = painter,
             contentDescription = "Heart Icon",
-            tint = HeartRed
+            tint = Heart
         )
         Divider(modifier = Modifier.width(6.dp))
         Text(
